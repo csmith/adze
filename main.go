@@ -1,9 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"errors"
-	"bufio"
 	"flag"
 	"fmt"
 	"io"

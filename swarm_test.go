@@ -15,10 +15,8 @@ func makeService(id, name, image string, versionIndex uint64, forceUpdate uint64
 
 func makeServiceWithLabels(id, name, image string, versionIndex uint64, forceUpdate uint64, labels map[string]string) swarm.Service {
 	return swarm.Service{
-		ID: id,
-		Meta: swarm.Meta{
-			Version: swarm.Version{Index: versionIndex},
-		},
+		ID:      id,
+		Version: swarm.Version{Index: versionIndex},
 		Spec: swarm.ServiceSpec{
 			Annotations: swarm.Annotations{
 				Name:   name,

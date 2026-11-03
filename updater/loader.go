@@ -14,6 +14,8 @@ func (l ComposeProjectLoader) LoadProject(ctx context.Context, workingDir string
 	optFns := []cli.ProjectOptionsFn{
 		cli.WithWorkingDirectory(workingDir),
 		cli.WithOsEnv,
+		cli.WithEnvFiles(),
+		cli.WithDotEnv,
 		cli.WithConfigFileEnv,
 		cli.WithDefaultConfigPath,
 	}
